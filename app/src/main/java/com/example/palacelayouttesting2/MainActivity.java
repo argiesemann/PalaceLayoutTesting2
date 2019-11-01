@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         PalaceGameState pgs = new PalaceGameState(getResources());
         tableView.setPgs(pgs);
+        tableView.setOnTouchListener(tableView);
+
+        tableView.setDiscardPile(pgs.getDiscardPile());
 
         Button tester = findViewById(R.id.TestButton);
         tester.setOnClickListener(this);

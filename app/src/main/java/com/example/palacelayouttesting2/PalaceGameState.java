@@ -495,4 +495,21 @@ public class PalaceGameState
 
 		return gameStateString;
 	}//toString
+
+	public ArrayList<Pair> getDiscardPile() {
+		return discardPile;
+	}
+
+	public boolean isDrawPileEmpty() {
+		boolean empty = true;
+
+		for (Pair p : the_deck) {
+			if (p.get_location() == Location.DRAW_PILE){
+				empty = false;
+				break;
+			}
+		}
+
+		return empty;
+	}
 }//class PalaceGameState
